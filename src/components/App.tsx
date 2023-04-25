@@ -38,7 +38,7 @@ const App: React.FC = () => {
     } else {
       document.body.style.overflow = 'hidden';
     }
-    
+
     setShowModal(prevState => (!prevState))
   }
 
@@ -48,13 +48,17 @@ const App: React.FC = () => {
     toggleModal();
   }
 
-  const loadMore = () => {
+  const loadMore = (e: React.MouseEvent<HTMLButtonElement>) => {
     setPage(prevState => (prevState + 1));
+    (e.target as HTMLButtonElement).disabled = true;
+
     setTimeout(() => {
       window.scrollBy({
         top: 520,
         behavior: "smooth",
       });
+
+      (e.target as HTMLButtonElement).disabled = false;
     }, 700)
   }
   

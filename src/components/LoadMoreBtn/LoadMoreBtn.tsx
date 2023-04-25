@@ -1,7 +1,7 @@
 import { Button, BtnContainer } from './LoadMoreBtn.styled';
 
 interface IProps {
-    onLoadMore: () => void,
+    onLoadMore: (e: React.MouseEvent<HTMLButtonElement>) => void,
 }
 
 export const LoadMoreBtn = ({onLoadMore}: IProps) => {
