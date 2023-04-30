@@ -1,6 +1,7 @@
 import { Formik, FormikHelpers} from "formik";
-import { SearchbarStyles, SearchForm, SearchFormButton, SearchFormInput } from './Searchbar.styled';
-import { IValues } from "../../types"
+import { SearchbarStyled, SearchForm, SearchFormButton, SearchFormInput } from './Searchbar.styled';
+import { IValues } from "../../types";
+import logoIcon from "../../images/logo.webp";
 
 interface IProps {
     onSubmit: ({ searchValue }: IValues, { resetForm }: FormikHelpers<IValues>) => void
@@ -8,8 +9,9 @@ interface IProps {
 
 export const Searchbar: React.FC<IProps> = ({ onSubmit }) => {
     return (
-        <SearchbarStyles>
-            <Formik initialValues={{searchValue: ''}} onSubmit={onSubmit}>
+        <SearchbarStyled>
+            <a href='/' style={{position: 'absolute', top: '10', left: 50}}><img src={logoIcon} alt='логотип' width={160} /></a>
+                <Formik initialValues={{searchValue: ''}} onSubmit={onSubmit}>
                 <SearchForm>
                     <SearchFormButton type="submit">
                         Search
@@ -24,6 +26,6 @@ export const Searchbar: React.FC<IProps> = ({ onSubmit }) => {
                     />
                 </SearchForm>
             </Formik>
-        </SearchbarStyles>
+        </SearchbarStyled>
     );
 }
