@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/piclib-picture-finder/static/css/main.17654e45.css",
-    "main.js": "/piclib-picture-finder/static/js/main.2cff77f2.js",
+    "main.js": "/piclib-picture-finder/static/js/main.ef969821.js",
     "static/media/platter.webp": "/piclib-picture-finder/static/media/platter.c6b60e28805875a0a062.webp",
     "static/media/houses.webp": "/piclib-picture-finder/static/media/houses.794924bfe45a13bd8247.webp",
     "static/media/mountains.webp": "/piclib-picture-finder/static/media/mountains.13f24a34e22ecf7b8f58.webp",
     "static/media/architecture.webp": "/piclib-picture-finder/static/media/architecture.6c256d4eb64eedf5235a.webp",
     "static/media/animal.webp": "/piclib-picture-finder/static/media/animal.86f15fcee90c7ac39ee5.webp",
+    "static/media/logo.webp": "/piclib-picture-finder/static/media/logo.2ba26ab8145d40c94173.webp",
     "static/media/wheat.webp": "/piclib-picture-finder/static/media/wheat.36e097c4e0710847e8f9.webp",
     "static/media/skateboard.webp": "/piclib-picture-finder/static/media/skateboard.e8761a7e96290db973eb.webp",
     "static/media/compass.webp": "/piclib-picture-finder/static/media/compass.b0e2a359865b1034281a.webp",
     "index.html": "/piclib-picture-finder/index.html",
     "main.17654e45.css.map": "/piclib-picture-finder/static/css/main.17654e45.css.map",
-    "main.2cff77f2.js.map": "/piclib-picture-finder/static/js/main.2cff77f2.js.map"
+    "main.ef969821.js.map": "/piclib-picture-finder/static/js/main.ef969821.js.map"
   },
   "entrypoints": [
     "static/css/main.17654e45.css",
-    "static/js/main.2cff77f2.js"
+    "static/js/main.ef969821.js"
   ]
 }
