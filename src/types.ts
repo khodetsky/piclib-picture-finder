@@ -26,3 +26,9 @@ export interface IImage {
   webformatURL: string,
   webformatWidth: number,
 };
+
+export interface IResponse {
+  total: number,
+  totalHits: number,
+  hits: IImage[]
+}

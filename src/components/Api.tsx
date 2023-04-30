@@ -1,14 +1,8 @@
-import { IImage } from "../types";
+import { IResponse } from "../types";
 import axios from 'axios';
 
 const PIXABEY_KEY = '28393009-563cada9a4af8f72bfd4d9668';
 const BASE_HTTP = 'https://pixabay.com/api/';
-
-interface IResponse {
-  total: number,
-  totalHits: number,
-  hits: IImage[]
-}
 
 async function get<T>(
     path: string
