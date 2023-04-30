@@ -5,14 +5,16 @@ import { IValues, IImage } from "../types";
 
 import { GlobalStyle } from './GlobalStyles';
 import { Searchbar } from './Searchbar/Searchbar';
-import { getUser } from './Api';
+import { getImages } from './Api';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { LoadMoreBtn } from './LoadMoreBtn/LoadMoreBtn';
 import { Loader } from './Loader/Loader';
 import { Modal } from './Modal/Modal';
+import { Gallery } from "./Gallery/Gallery";
 
 const App: React.FC = () => {
   const [page, setPage] = useState(1);
+  const [totalHits, setTotalHits] = useState(0);
   const [searchValue, setSearchValue] = useState('');
   const [images, setImages] = useState<IImage[]>([]);
   const [currentImage, setCurrentImage] = useState<Partial<IImage>>({});
@@ -24,13 +26,23 @@ const App: React.FC = () => {
       return;
     }
 
-    getUser(searchValue, page).then( (r) => {
+    getImages(searchValue, page).then( (r) => {
       if (typeof r !== "undefined") {
-        setImages(prevImages => [...prevImages, ...r]);
+        setImages(prevImages => [...prevImages, ...r.hits]);
+        setTotalHits(r.totalHits)
         setStatus("done")
       }
     });
   }, [page, searchValue]);
+
+  useEffect(() => {
+    if (status === "done" && window.pageYOffset === 0) {
+      window.scrollBy({
+        top: 500,
+        behavior: "smooth",
+      });
+    }
+  }, [status])
 
   const toggleModal = (): void => {
     if (showModal) {
@@ -67,17 +79,21 @@ const App: React.FC = () => {
     setImages([]);
     setPage(1);
     setStatus("loading");
+    window.scroll(0, 500);
     resetForm();
   }
 
   return (
     <>
       <Searchbar onSubmit={onFormSubmit} />
+      <Gallery />
 
       {status === "done" && (
         <>
           <ImageGallery images={images} onModalOpen={findCurrentImage} />
-          <LoadMoreBtn onLoadMore={loadMore} />
+          {images.length !== totalHits && (
+            <LoadMoreBtn onLoadMore={loadMore} />
+          )}
         </>
       )}
 

@@ -4,7 +4,7 @@ interface IProps {
     onLoadMore: (e: React.MouseEvent<HTMLButtonElement>) => void,
 }
 
-export const LoadMoreBtn = ({onLoadMore}: IProps) => {
+export const LoadMoreBtn: React.FC<IProps> = ({onLoadMore}: IProps) => {
     return (
         <BtnContainer>
             <Button type="button" onClick={onLoadMore}>Load more</Button>

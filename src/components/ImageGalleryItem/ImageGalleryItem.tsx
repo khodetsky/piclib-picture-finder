@@ -6,7 +6,7 @@ interface IProps {
     onModalOpen: (e: React.MouseEvent<HTMLElement>) => void
 }
 
-export const ImageGalleryItem = (props: IProps) => {
+export const ImageGalleryItem: React.FC<IProps> = (props: IProps) => {
     const {  picture, tags, onModalOpen } = props;
     return (
         <GalleryItem onClick={onModalOpen}>

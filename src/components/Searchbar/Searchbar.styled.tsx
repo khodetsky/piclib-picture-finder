@@ -26,20 +26,17 @@ export const SearchForm = styled(Form)`
     width: 100%;
     max-width: 600px;
     background-color: #fff;
-    border-radius: 3px;
+    border-radius: 10px;
     overflow: hidden;`
 ;
 
 export const SearchFormButton = styled.button`
     display: inline-block;
-//   width: 48px;
     height: 48px;
     border: 0;
-//   background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.6;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     outline: none;
@@ -47,13 +44,14 @@ export const SearchFormButton = styled.button`
     margin-right: 10px;
     padding: 0 10px;
     background-color: yellow;
-    border-radius: 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     width: auto;
     color: #3f51b5;
     font-weight: 500;
 
     :hover {
-    opacity: 1;
+        opacity: 0.8;
     }`
 ;
 

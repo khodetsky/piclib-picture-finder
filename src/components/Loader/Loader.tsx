@@ -1,6 +1,6 @@
 import { Triangle } from 'react-loader-spinner';
 
-export const Loader = () => {
+export const Loader: React.FC = () => {
     return (
         <Triangle
           height="120"

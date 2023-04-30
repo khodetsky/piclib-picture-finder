@@ -5,7 +5,7 @@ interface IProps {
     onClose: () => void,
 }
 
-export const Modal = (props: PropsWithChildren<IProps>) => {
+export const Modal: React.FC<PropsWithChildren<IProps>> = (props: PropsWithChildren<IProps>) => {
     const { onClose, children } = props;
 
     useEffect(() => {
