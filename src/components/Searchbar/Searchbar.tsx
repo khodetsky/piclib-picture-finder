@@ -10,12 +10,11 @@ interface IProps {
 export const Searchbar: React.FC<IProps> = ({ onSubmit }) => {
     return (
         <SearchbarStyled>
-            <a href='/' style={{position: 'absolute', top: '10', left: 50}}><img src={logoIcon} alt='логотип' width={160} /></a>
+            <a href='/piclib-picture-finder/' style={{position: 'absolute', top: '10', left: 50}}><img src={logoIcon} alt='логотип' width={160} /></a>
                 <Formik initialValues={{searchValue: ''}} onSubmit={onSubmit}>
                 <SearchForm>
                     <SearchFormButton type="submit">
                         Search
-                        {/* <SearchFormButtonLabel></SearchFormButtonLabel> */}
                     </SearchFormButton>
                     <SearchFormInput
                         name="searchValue"
