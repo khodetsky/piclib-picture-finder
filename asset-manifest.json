@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/piclib-picture-finder/static/css/main.17654e45.css",
-    "main.js": "/piclib-picture-finder/static/js/main.ef969821.js",
+    "main.js": "/piclib-picture-finder/static/js/main.f48c173a.js",
     "static/media/platter.webp": "/piclib-picture-finder/static/media/platter.c6b60e28805875a0a062.webp",
     "static/media/houses.webp": "/piclib-picture-finder/static/media/houses.794924bfe45a13bd8247.webp",
     "static/media/mountains.webp": "/piclib-picture-finder/static/media/mountains.13f24a34e22ecf7b8f58.webp",
@@ -13,10 +13,10 @@
     "static/media/compass.webp": "/piclib-picture-finder/static/media/compass.b0e2a359865b1034281a.webp",
     "index.html": "/piclib-picture-finder/index.html",
     "main.17654e45.css.map": "/piclib-picture-finder/static/css/main.17654e45.css.map",
-    "main.ef969821.js.map": "/piclib-picture-finder/static/js/main.ef969821.js.map"
+    "main.f48c173a.js.map": "/piclib-picture-finder/static/js/main.f48c173a.js.map"
   },
   "entrypoints": [
     "static/css/main.17654e45.css",
-    "static/js/main.ef969821.js"
+    "static/js/main.f48c173a.js"
   ]
 }
